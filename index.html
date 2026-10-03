@@ -1,0 +1,179 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#071A3D">
+<title>OrderFlow | You sell it. Find a driver to deliver it.</title><meta name="description" content="Online vendors post their goods and find delivery drivers on OrderFlow. Riders get more delivery jobs. Simple, fast, reliable.">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--b:#2563EB;--n:#071A3D;--l:#EFF6FF;--line:#d3e0f7;--mut:#51668f;--h:"Bricolage Grotesque","Satoshi",system-ui,sans-serif;--f:"Plus Jakarta Sans","Satoshi",system-ui,sans-serif}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;font:500 1rem/1.55 var(--f);color:var(--n);background:#fff;overflow-x:clip;-webkit-font-smoothing:antialiased}
+h1,h2,h3,p,ul,ol{margin:0}ul,ol{padding:0;list-style:none}img{display:block;max-width:100%}
+h1,h2,h3{font-family:var(--h);font-weight:800;letter-spacing:-.035em;line-height:1}
+h1{font-size:clamp(2.9rem,10.5vw,6.6rem);line-height:.92}h2{font-size:clamp(2.1rem,6vw,4.3rem);line-height:.96}
+.wrap{width:100%;max-width:1240px;margin:0 auto;padding:0 20px}
+.b{color:var(--b)}.lb{color:#79a2ff}.eye{display:inline-block;font-weight:800;font-size:.85rem;color:var(--b);margin-bottom:14px}
+section{padding:76px 0}.lead{font-size:clamp(1.05rem,2.2vw,1.25rem);color:var(--mut);max-width:44ch;margin-top:18px}
+.lgo{width:30px;height:29px}.logo{display:flex;gap:10px;align-items:center;color:#fff;font:800 1.2rem var(--h);letter-spacing:.02em;text-decoration:none}
+nav{position:sticky;top:0;z-index:30;background:var(--n)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:62px;gap:14px}
+.lk{display:none;gap:28px}.lk a{color:#c7d6f5;text-decoration:none;font-weight:700;font-size:.95rem}.lk a:hover{color:#fff}
+.mb{background:none;border:0;color:#fff;font-size:1.7rem;cursor:pointer;padding:6px}
+.menu{display:none;background:var(--n);padding:6px 20px 20px}.menu.on{display:grid}.menu a{color:#fff;text-decoration:none;font-weight:700;padding:12px 0;border-top:1px solid #27447f}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:800 .95rem var(--f);text-decoration:none;border:2px solid var(--b);background:var(--b);color:#fff;padding:14px 24px;border-radius:999px;cursor:pointer;transition:transform .2s,background .2s,color .2s}
+.btn:hover{transform:translateY(-2px)}.btn:active{transform:scale(.97)}.btn.arr::after{content:"→";transition:transform .25s}.btn.arr:hover::after{transform:translateX(5px)}
+.btn.out{background:none;color:var(--n);border-color:var(--n)}.btn.out:hover{background:var(--n);color:#fff}.btn.wh{background:#fff;color:var(--b);border-color:#fff}.btn.sm{padding:10px 18px;font-size:.85rem}
+:is(a,button,input,select,summary):focus-visible{outline:3px solid #79a2ff;outline-offset:3px}
+/* hero */
+.hero{padding:44px 0 64px;overflow:hidden}.hero .g{display:grid;gap:44px}
+.hero .lead{margin:22px 0 30px}.hero h1 span{display:block;overflow:hidden}.hero h1 i{display:block;font-style:normal;transform:translateY(108%);animation:up .9s cubic-bezier(.2,.8,.2,1) forwards}.hero h1 span:nth-child(2) i{animation-delay:.1s}
+@keyframes up{to{transform:none}}
+.two{display:grid;gap:18px}.two small{display:block;font-weight:700;color:var(--mut);margin-bottom:8px;font-size:.9rem}
+.or{display:none}
+.stage{position:relative;padding:0 0 30px 0}.stage::before{content:"";position:absolute;inset:40px -20px 0 40px;background:var(--n)}
+.oc{position:relative;background:#fff;border:2px solid var(--n);padding:22px;max-width:420px;margin-left:auto;margin-right:auto;box-shadow:12px 12px 0 var(--b)}
+.oc .t{display:flex;justify-content:space-between;font-weight:800;font-size:.85rem;color:var(--b)}
+.oc h3{font-size:1.6rem;margin:10px 0 14px}
+.ph{height:90px;background:var(--l) url(https://orderflowlandingpage.vercel.app/assets/images/vendor_packaging.jpg) center/cover;margin-bottom:14px}
+.r{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-top:1px solid var(--line);font-size:.95rem}.r span{color:var(--mut)}.r b{text-align:right}
+.st{margin:14px 0;padding:12px 14px;background:var(--l);font-weight:800;display:flex;gap:10px;align-items:center;transition:.4s}.st.ok{background:var(--b);color:#fff}
+.sp{width:13px;height:13px;border:3px solid var(--b);border-top-color:transparent;border-radius:50%;animation:sp .8s linear infinite;flex:none}@keyframes sp{to{transform:rotate(360deg)}}
+.pg{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;font-size:.72rem;font-weight:800;color:#8ca0c4}.pg div{border-top:5px solid var(--line);padding-top:6px;transition:.4s}.pg div.on{color:var(--n);border-color:var(--b)}
+/* problem */
+.prob{background:var(--l)}.bub{display:flex;flex-direction:column;gap:12px;margin:38px 0 40px}
+.q{background:#fff;font-weight:800;font-size:clamp(1.05rem,3vw,1.5rem);padding:14px 20px;border-radius:22px 22px 22px 4px;align-self:flex-start;border:2px solid var(--n);opacity:0;transform:translateX(-26px);transition:.6s cubic-bezier(.2,.8,.2,1)}
+.q:nth-child(even){align-self:flex-end;border-radius:22px 22px 4px 22px}.bub.in .q{opacity:1;transform:none}
+.bub.in .q:nth-child(2){transition-delay:.15s}.bub.in .q:nth-child(3){transition-delay:.3s}.bub.in .q:nth-child(4){transition-delay:.45s}.bub.in .q:nth-child(5){transition-delay:.6s}
+.fix{display:flex;gap:16px;align-items:center;flex-wrap:wrap}.fix h3{font-size:clamp(1.8rem,5vw,3.2rem)}.fix p{color:var(--mut);font-weight:700}
+.fix .ar{font:800 2.4rem var(--h);color:var(--b);animation:nd 1.4s ease-in-out infinite}@keyframes nd{50%{transform:translateX(8px)}}
+/* how */
+.how{display:grid;gap:0;margin-top:44px;position:relative}.how::before{content:"";position:absolute;left:21px;top:20px;bottom:20px;width:4px;background:var(--line)}
+.how .fl{position:absolute;left:21px;top:20px;width:4px;height:0;background:var(--b);transition:height 4s linear}.how.go .fl{height:calc(100% - 40px)}
+.how li{position:relative;padding:0 0 36px 66px}.how li:last-child{padding:0 0 0 66px}
+.how li::before{content:attr(data-n);position:absolute;left:0;top:0;width:46px;height:46px;border-radius:50%;background:#fff;border:3px solid var(--line);display:grid;place-items:center;font:800 1rem var(--h);transition:.4s}
+.how li.on::before{background:var(--b);border-color:var(--b);color:#fff}.how h3{font-size:1.5rem;margin-bottom:6px}.how p{color:var(--mut);max-width:28ch}
+/* split */
+.sp2{display:grid;gap:40px;align-items:center}
+.ph2{position:relative;background:var(--l);aspect-ratio:4/5;max-height:560px;width:100%}.ph2 img{width:100%;height:100%;object-fit:cover;clip-path:inset(0 100% 0 0);transition:clip-path 1.1s cubic-bezier(.2,.8,.2,1)}.ph2.in img{clip-path:inset(0)}
+.ph2::after{content:"";position:absolute;inset:14px -14px -14px 14px;border:3px solid var(--b);z-index:-1}
+.tg{position:absolute;left:0;bottom:0;background:var(--n);color:#fff;font-weight:800;font-size:.85rem;padding:9px 14px}
+.ck{margin:26px 0 30px;display:grid;gap:12px}.ck li{display:flex;gap:12px;font-weight:700}.ck li::before{content:"✓";display:grid;place-items:center;flex:none;width:24px;height:24px;border-radius:50%;background:var(--b);color:#fff;font-size:.8rem}
+.dark{background:var(--n);color:#fff}.dark .lead{color:#b4c6ee}.dark .ck li::before{background:#fff;color:var(--b)}.dark .ph2::after{border-color:#79a2ff}.dark .tg{background:var(--b)}
+.jb{position:absolute;right:-6px;bottom:24px;background:#fff;color:var(--n);width:min(250px,78%);padding:16px;border:2px solid var(--n);box-shadow:8px 8px 0 var(--b);transform:translateX(30px);opacity:0;transition:.8s .5s cubic-bezier(.2,.8,.2,1)}.ph2.in .jb{transform:none;opacity:1}
+.jb small{font-weight:800;color:var(--b);font-size:.75rem}.jb .rt{display:flex;gap:8px;font:800 1.1rem var(--h);margin:4px 0}.jb .rt span{color:var(--b)}.jb .pr{font:800 1.9rem var(--h);letter-spacing:-.03em}
+.jb .btn{width:100%;margin-top:10px;padding:10px}.jb .btn.d{background:var(--n);border-color:var(--n);pointer-events:none}
+/* network */
+.net{display:grid;gap:22px;margin-top:44px}.tile{position:relative}.tile .im{aspect-ratio:4/3;background:var(--l);overflow:hidden}.tile img{width:100%;height:100%;object-fit:cover;transition:transform .6s}.tile:hover img{transform:scale(1.05)}
+.tile h3{font-size:1.6rem;margin-top:12px;display:flex;align-items:center;gap:10px}.tile h3::before{content:"";width:12px;height:12px;border-radius:50%;background:var(--b)}
+.ln{display:none}
+/* why */
+.wy{display:grid;gap:0;margin-top:38px}.wy li{border-top:2px solid var(--n);padding:24px 0;display:grid;gap:8px;transition:padding .3s}.wy li:last-child{border-bottom:2px solid var(--n)}
+.wy li:hover{padding-left:14px}.wy h3{font-size:clamp(1.5rem,4vw,2.3rem);transition:color .3s}.wy li:hover h3{color:var(--b)}.wy p{color:var(--mut);max-width:48ch}.wy li>span{font:800 .9rem var(--h);color:var(--b)}
+/* cta */
+.cta{background:var(--b);color:#fff}.cp{display:grid;gap:16px;margin-top:36px}.cp>div{background:#fff;color:var(--n);padding:28px;display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.cp>div:last-child{background:var(--n);color:#fff}.cp h3{font-size:2rem}.cp p{color:var(--mut)}.cp>div:last-child p{color:#b4c6ee}.cp small{font-weight:800;color:var(--b)}.cp>div:last-child small{color:#79a2ff}
+footer{background:var(--n);color:#9db5ec;padding:56px 0 24px;font-size:.92rem}.fg{display:grid;gap:30px}footer h4{margin:0 0 10px;color:#fff}footer a{display:block;color:#9db5ec;text-decoration:none;padding:3px 0}footer a:hover{color:#fff}
+.cr{margin-top:36px;padding-top:20px;border-top:1px solid #27447f}
+.rv{opacity:0;transform:translateY(26px);transition:.8s cubic-bezier(.2,.8,.2,1)}.rv.in{opacity:1;transform:none}
+/* modal */
+dialog{border:2px solid var(--n);padding:0;width:min(460px,calc(100vw - 24px));max-height:92vh;color:var(--n);font-family:var(--f)}dialog::backdrop{background:#071a3dcc}
+dialog form,dialog .ok{display:grid;gap:12px;padding:28px 24px;position:relative}dialog h3{font-size:1.7rem}dialog p{color:var(--mut)}
+label{display:grid;gap:6px;font-weight:800;font-size:.88rem}input,select{font:500 1rem var(--f);padding:13px;border:2px solid var(--n);border-radius:0;background:#fff;color:var(--n);width:100%}
+input:invalid:not(:placeholder-shown){border-color:#c0392b}.x{position:absolute;right:12px;top:8px;background:none;border:0;font-size:1.9rem;cursor:pointer;color:var(--n)}
+.hp{position:absolute!important;left:-9999px}.err{color:#b3261e;font-weight:700;font-size:.9rem;min-height:0}.ok{display:none;text-align:center;justify-items:center}.ok b{width:58px;height:58px;border-radius:50%;background:var(--b);color:#fff;display:grid;place-items:center;font-size:1.7rem}
+dialog.done form{display:none}dialog.done .ok{display:grid}.btn[disabled]{opacity:.6;pointer-events:none}
+@media(min-width:900px){
+.wrap{padding:0 40px}section{padding:120px 0}.lk{display:flex}.mb,.menu{display:none!important}
+.hero .g{grid-template-columns:1.1fr .9fr;align-items:center;gap:60px}.two{grid-template-columns:auto auto auto;align-items:end;justify-content:start;gap:22px}.or{display:block;font-weight:700;color:var(--mut);padding-bottom:14px}
+.sp2{grid-template-columns:1fr 1fr;gap:90px}.sp2.rev .ph2{order:2}
+.how{grid-template-columns:repeat(5,1fr);gap:22px}.how::before{left:0;right:0;top:21px;bottom:auto;width:auto;height:4px}.how .fl{left:0;top:21px;height:4px!important;width:0;transition:width 4s linear}.how.go .fl{width:100%}
+.how li,.how li:last-child{padding:64px 0 0}.how h3{font-size:1.35rem}
+.net{grid-template-columns:1fr 1fr 1fr;gap:56px;position:relative}.net .ln{display:block;position:absolute;top:calc(50% - 38px);height:4px;background:var(--line);width:56px;z-index:2}.net .ln:nth-of-type(1){left:calc(33.33% - 40px)}.net .ln:nth-of-type(2){left:calc(66.66% - 24px)}
+.net .ln i{position:absolute;top:-5px;left:0;width:14px;height:14px;border-radius:50%;background:var(--b);animation:mv 2s linear infinite}@keyframes mv{to{left:calc(100% - 14px)}}
+.wy li{grid-template-columns:70px 1fr 1fr;align-items:center;gap:20px}
+.cp{grid-template-columns:1fr 1fr}.fg{grid-template-columns:1.6fr 1fr 1fr 1fr}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.q,.rv,.hero h1 i{opacity:1;transform:none}.ph2 img{clip-path:none}.jb{opacity:1;transform:none}}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="lg" viewBox="0 0 651 628"><g fill="#ffffff"><path d="M 1 292 L 1 312 L 0 316 L 1 317 L 1 333 L 2 334 L 3 351 L 4 352 L 4 358 L 5 359 L 8 380 L 16 410 L 24 432 L 39 462 L 50 479 L 69 504 L 85 522 L 110 546 L 134 565 L 160 582 L 184 595 L 212 607 L 248 618 L 252 618 L 272 623 L 294 625 L 295 626 L 307 626 L 308 627 L 344 627 L 345 626 L 356 626 L 357 625 L 365 625 L 366 624 L 390 621 L 418 614 L 447 604 L 489 584 L 519 565 L 542 547 L 565 525 L 586 501 L 597 486 L 616 454 L 626 433 L 637 404 L 569 404 L 561 421 L 548 443 L 523 476 L 497 502 L 478 517 L 458 530 L 433 543 L 397 556 L 376 561 L 357 563 L 356 564 L 313 565 L 312 564 L 301 564 L 300 563 L 287 562 L 257 555 L 220 541 L 190 525 L 172 513 L 146 492 L 128 474 L 116 460 L 93 426 L 82 402 L 77 387 L 73 366 L 74 365 L 216 365 L 217 364 L 229 363 L 244 358 L 259 350 L 274 339 L 438 193 L 437 194 L 435 193 L 285 193 L 284 194 L 266 196 L 251 201 L 238 208 L 193 246 L 162 274 L 151 282 L 139 288 L 124 292 Z"/><path d="M 7 247 L 72 247 L 74 244 L 81 223 L 96 193 L 107 176 L 127 151 L 145 133 L 166 116 L 194 98 L 216 87 L 255 73 L 276 68 L 281 68 L 293 65 L 308 64 L 309 63 L 348 62 L 349 63 L 361 63 L 362 64 L 369 64 L 370 65 L 388 67 L 427 78 L 455 91 L 479 106 L 492 116 L 522 145 L 538 165 L 548 180 L 561 203 L 569 220 L 578 243 L 584 265 L 583 281 L 580 286 L 573 292 L 452 292 L 451 293 L 440 293 L 439 294 L 428 295 L 404 303 L 390 311 L 331 359 L 215 459 L 354 459 L 355 458 L 369 457 L 386 452 L 403 444 L 418 434 L 483 381 L 506 369 L 523 365 L 646 365 L 647 363 L 648 349 L 649 348 L 649 336 L 650 335 L 650 305 L 649 304 L 649 293 L 648 292 L 647 277 L 640 241 L 632 216 L 632 213 L 630 210 L 623 189 L 609 160 L 589 128 L 569 103 L 545 79 L 527 64 L 501 46 L 458 24 L 433 15 L 402 7 L 397 7 L 378 3 L 371 3 L 370 2 L 343 1 L 342 0 L 305 1 L 304 2 L 295 2 L 294 3 L 287 3 L 286 4 L 268 6 L 234 14 L 207 23 L 181 34 L 146 53 L 121 70 L 93 94 L 75 113 L 59 133 L 46 152 L 29 183 L 17 211 Z"/></g></symbol></svg>
+<nav><div class="wrap"><a class="logo" href="#top" aria-label="OrderFlow home"><svg class="lgo" viewBox="0 0 651 628"><use href="#lg"/></svg>ORDERFLOW</a>
+<div class="lk"><a href="#how-it-works">How it works</a><a href="#for-businesses">For businesses</a><a href="#for-riders">For riders</a><a href="#about">About</a></div>
+<button class="btn sm" data-open="business">Get started</button><button class="mb" id="mb" aria-label="Menu">☰</button></div>
+<div class="menu" id="mn"><a href="#how-it-works">How it works</a><a href="#for-businesses">For businesses</a><a href="#for-riders">For riders</a><a href="#about">About</a></div></nav>
+
+<header class="hero" id="top"><div class="wrap g"><div>
+<span class="eye">Now in Ibadan · Other states coming soon</span>
+<h1><span><i>You sell it.</i></span><span><i class="b">Find a driver.</i></span></h1>
+<p class="lead">Take photos of your goods, post them on OrderFlow, and get a delivery driver. Riders get more delivery jobs.</p>
+<div class="two"><div><small>Got goods to send?</small><button class="btn arr" data-open="business">Find a driver</button></div><span class="or">or</span><div><small>Want delivery work?</small><button class="btn out arr" data-open="rider">Join as a rider</button></div></div></div>
+<div class="stage"><div class="oc"><div class="t"><span>NEW POST</span><span>Just now</span></div><h3>Ankara dress × 2</h3><div class="ph"></div>
+<div class="r"><span>Pickup</span><b>Yaba, Lagos</b></div><div class="r"><span>Deliver to</span><b>Ikeja, Lagos</b></div><div class="r"><span>Posted by</span><b>Chidi O.</b></div>
+<div class="st" id="hs"><i class="sp"></i><span>Looking for a driver...</span></div>
+<div class="pg" id="hp"><div>Posted ✓</div><div>Driver found</div><div>On the way</div><div>Delivered ✓</div></div></div></div></div></header>
+
+<section class="prob"><div class="wrap"><span class="eye">The problem</span><h2>Still calling riders<br><span class="b">one by one?</span></h2>
+<p class="lead">Finding a driver on your own takes time you don't have. OrderFlow puts them in one place.</p>
+<div class="bub" id="bub"><div class="q">"Is anyone available?"</div><div class="q">"How much to deliver this?"</div><div class="q">"Where is the rider?"</div><div class="q">"Has the order been picked up?"</div><div class="q">"Who can deliver this today?"</div></div>
+<div class="fix rv"><span class="ar">→</span><h3>OrderFlow makes delivery easier.</h3><p>One place. Less stress. Goods moving.</p></div></div></section>
+
+<section id="how-it-works"><div class="wrap"><span class="eye">How it works</span><h2>From your store<br>to <span class="b">their door.</span></h2>
+<ol class="how" id="hw"><div class="fl"></div>
+<li data-n="01"><h3>Post your goods</h3><p>Take photos, say what you are sending, where from and where to.</p></li>
+<li data-n="02"><h3>Drivers see it</h3><p>Available drivers on OrderFlow can see your delivery.</p></li>
+<li data-n="03"><h3>Pick a driver</h3><p>Choose the driver that works for you.</p></li>
+<li data-n="04"><h3>Driver picks it up</h3><p>The driver collects the package and gets moving.</p></li>
+<li data-n="05"><h3>Delivered</h3><p>Your customer receives their order. Everyone is happy.</p></li></ol></div></section>
+
+<section id="for-businesses" style="background:var(--l)"><div class="wrap sp2"><div class="ph2 rv"><img src="https://orderflowlandingpage.vercel.app/assets/images/vendor_packaging.jpg" alt="Nigerian vendor packaging an order" loading="lazy"><span class="tg">Ibadan, Nigeria</span></div>
+<div><span class="eye">For businesses</span><h2>You sell.<br><span class="b">We help you deliver.</span></h2><p class="lead">Selling online? Post your goods and find a delivery driver on OrderFlow. No more calling around.</p>
+<ul class="ck"><li>Post your goods with photos from your phone</li><li>Find available drivers quickly</li><li>Know what is happening with your delivery</li><li>Spend less time calling around</li></ul><button class="btn arr" data-open="business">Start posting goods</button></div></div></section>
+
+<section class="dark" id="for-riders"><div class="wrap sp2 rev"><div class="ph2 rv"><img src="https://orderflowlandingpage.vercel.app/assets/images/rider_pickup.jpg" alt="Delivery rider picking up a package" loading="lazy"><span class="tg">Delivery jobs</span>
+<div class="jb"><small>NEW DELIVERY · JUST NOW</small><div class="rt">Ikeja <span>→</span> Yaba</div><div class="pr">₦3,500</div><button class="btn" id="acc">Accept job</button></div></div>
+<div><span class="eye lb">For riders &amp; logistics</span><h2>You deliver.<br><span class="lb">You earn.</span></h2><p class="lead">Join OrderFlow and see delivery jobs from vendors near you. Pick the ones that work for you.</p>
+<ul class="ck"><li>See delivery requests from vendors</li><li>Choose jobs that work for you</li><li>Keep track of all your deliveries</li><li>Earn from more trips every day</li></ul><button class="btn wh arr" data-open="rider">Join the delivery network</button></div></div></section>
+
+<section id="about"><div class="wrap"><span class="eye">The network</span><h2>Business. Rider.<br><span class="b">Customer.</span></h2><p class="lead">OrderFlow connects vendors and drivers. You post. A driver delivers. Your customer is happy.</p>
+<div class="net rv"><i class="ln"><i></i></i><i class="ln"><i></i></i>
+<div class="tile"><div class="im"><img src="https://orderflowlandingpage.vercel.app/assets/images/vendor_packaging.jpg" alt="Business owner packaging an order" loading="lazy"></div><h3>Business</h3></div>
+<div class="tile"><div class="im"><img src="https://orderflowlandingpage.vercel.app/assets/images/rider_pickup.jpg" alt="Delivery rider picking up package" loading="lazy"></div><h3>Rider</h3></div>
+<div class="tile"><div class="im"><img src="https://orderflowlandingpage.vercel.app/assets/images/customer_delivery.jpg" alt="Customer receiving delivery" loading="lazy"></div><h3>Customer</h3></div></div></div></section>
+
+<section style="background:var(--l)"><div class="wrap"><span class="eye">Why OrderFlow</span><h2>Built for the way<br><span class="b">Nigerian business works.</span></h2>
+<ul class="wy"><li class="rv"><span>01</span><h3>Easy to use</h3><p>You don't need to be a tech person. If you can use WhatsApp, you can use OrderFlow.</p></li><li class="rv"><span>02</span><h3>Quick to get started</h3><p>Sign up today and post your first goods or see your first job the same day.</p></li><li class="rv"><span>03</span><h3>Know what's happening</h3><p>Always know where your delivery is. No more wondering, no more guessing.</p></li><li class="rv"><span>04</span><h3>More delivery opportunities</h3><p>Riders get more jobs. Businesses get more choices. Everyone moves more.</p></li></ul></div></section>
+
+<section class="cta"><div class="wrap"><span class="eye" style="color:#cfe0ff">Ready?</span><h2>Ready to get moving?</h2><p class="lead" style="color:#e2ecff">Whether you sell or deliver, OrderFlow is built for you.</p>
+<div class="cp"><div><small>FOR BUSINESSES</small><h3>Find a driver for your goods.</h3><p>Sign up and post your first delivery.</p><button class="btn arr" data-open="business">Get started</button></div>
+<div><small>FOR RIDERS</small><h3>Start earning from deliveries.</h3><p>Join the network and see jobs near you.</p><button class="btn wh arr" data-open="rider">Join as a rider</button></div></div></div></section>
+
+<footer><div class="wrap"><div class="fg"><div><a class="logo" href="#top"><svg class="lgo" viewBox="0 0 651 628"><use href="#lg"/></svg>ORDERFLOW</a><p style="margin-top:14px;max-width:34ch">Helping vendors find delivery drivers and riders find more work across Nigeria.</p></div>
+<div><h4>Product</h4><a href="#how-it-works">How it works</a><a href="#for-businesses">For businesses</a><a href="#for-riders">For riders</a></div><div><h4>Company</h4><a href="#about">About</a><a href="#">Contact</a></div><div><h4>Legal</h4><a href="#">Privacy policy</a><a href="#">Terms of service</a></div></div>
+<p class="cr">© 2026 OrderFlow. All rights reserved. Made for Nigerian commerce. Starting in Ibadan, coming to other states soon.</p></div></footer>
+<dialog id="m-business"><form data-role="business" novalidate><button type="button" class="x" aria-label="Close">×</button><h3>Send your goods with a driver</h3><p>Create your free vendor account and find drivers for your deliveries.</p><label>Your full name<input name="full_name" autocomplete="name" required></label><label>Business name<input name="business_name" required></label><label>Email<input name="email" type="email" autocomplete="email" placeholder="you@email.com" required></label><label>WhatsApp / Phone number<input name="phone" type="tel" autocomplete="tel" placeholder="0801 234 5678" required></label><label>Your city<select name="city" required><option value="">Select city</option><option>Lagos</option><option>Abuja</option><option>Port Harcourt</option><option>Kano</option><option>Ibadan</option><option>Other</option></select></label><input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true"><div class="err" role="alert"></div><button class="btn" type="submit">Get started, it's free</button></form><div class="ok"><b>✓</b><h3>You're on the list!</h3><p>We'll be in touch very soon. Thanks for joining OrderFlow.</p><button class="btn" type="button" data-close>Done</button></div></dialog><dialog id="m-rider"><form data-role="rider" novalidate><button type="button" class="x" aria-label="Close">×</button><h3>Join as a rider</h3><p>Get delivery jobs from vendors near you and start earning more.</p><label>Your full name<input name="full_name" autocomplete="name" required></label><label>Email<input name="email" type="email" autocomplete="email" placeholder="you@email.com" required></label><label>WhatsApp / Phone number<input name="phone" type="tel" autocomplete="tel" placeholder="0801 234 5678" required></label><label>Your city<select name="city" required><option value="">Select city</option><option>Lagos</option><option>Abuja</option><option>Port Harcourt</option><option>Kano</option><option>Ibadan</option><option>Other</option></select></label><label>What do you ride or drive?<select name="vehicle" required><option value="">Select</option><option>Motorbike</option><option>Bicycle</option><option>Car</option><option>Van</option><option>Truck</option></select></label><input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true"><div class="err" role="alert"></div><button class="btn" type="submit">Join the delivery network</button></form><div class="ok"><b>✓</b><h3>You're on the list!</h3><p>We'll be in touch very soon. Thanks for joining OrderFlow.</p><button class="btn" type="button" data-close>Done</button></div></dialog>
+<script>
+/* Signups go to /api/signup (api/signup.js), which reads your Supabase keys from Vercel environment variables. */
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+$('#mb').onclick=()=>$('#mn').classList.toggle('on');$$('#mn a').forEach(a=>a.onclick=()=>$('#mn').classList.remove('on'));
+/* modals */
+$$('[data-open]').forEach(b=>b.onclick=()=>{const d=$('#m-'+b.dataset.open);d.classList.remove('done');d.showModal();$('#mn').classList.remove('on')});
+$$('dialog').forEach(d=>{d.addEventListener('click',e=>{if(e.target===d)d.close()});d.querySelectorAll('.x,[data-close]').forEach(x=>x.onclick=()=>d.close())});
+$$('dialog form').forEach(f=>{const err=f.querySelector('.err'),btn=f.querySelector('button[type=submit]'),lab=btn.textContent;
+f.onsubmit=async e=>{e.preventDefault();err.textContent='';
+if(f.website.value)return;
+if(!f.checkValidity()){f.reportValidity();return}
+const v=Object.fromEntries(new FormData(f));delete v.website;
+const row={role:f.dataset.role,full_name:v.full_name.trim(),business_name:(v.business_name||'').trim()||null,email:v.email.trim().toLowerCase(),phone:v.phone.trim(),city:v.city,vehicle:v.vehicle||null};
+btn.disabled=true;btn.textContent='Sending...';
+try{
+if(location.protocol==='file:'){console.warn('Opened as a local file. Signup NOT saved:',row);err.style.color='#51668f';err.textContent='Demo mode: signups only save once the site is live on Vercel.';await new Promise(r=>setTimeout(r,600))}
+else{const r=await fetch('/api/signup',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(row)});if(!r.ok)throw new Error(r.status)}
+f.closest('dialog').classList.add('done');f.reset()
+}catch(x){err.style.color='#b3261e';err.textContent='Something went wrong. Please try again.'}
+btn.disabled=false;btn.textContent=lab}});
+/* hero card loop */
+const hs=$('#hs'),pg=$$('#hp div'),S=[['Looking for a driver...',1,0],['Driver found ✓',0,1],['On the way',0,2],['Delivered ✓',0,3]];let k=0;
+(function s(){const[t,sp,i]=S[k];hs.innerHTML=(sp?'<i class="sp"></i>':'')+'<span>'+t+'</span>';hs.classList.toggle('ok',i==3);pg.forEach((e,j)=>e.classList.toggle('on',sp?false:j<=i));k=(k+1)%4;setTimeout(s,k==0?3200:1900)})();
+/* reveals */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const t=e.target;t.classList.add('in');io.unobserve(t);
+if(t.id=='hw'){t.classList.add('go');[...t.querySelectorAll('li')].forEach((l,i)=>setTimeout(()=>l.classList.add('on'),i*800))}}}),{threshold:.25});
+['.rv','#bub','#hw'].forEach(q=>$$(q).forEach(e=>io.observe(e)));
+$('#acc').onclick=e=>{const b=e.target;b.textContent='Job accepted ✓';b.classList.add('d')};
+</script></body></html>
