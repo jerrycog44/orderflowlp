@@ -1,14 +1,15 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#071A3D">
-<title>OrderFlow | You sell it. Find a driver to deliver it.</title><meta name="description" content="Online vendors post their goods and find delivery drivers on OrderFlow. Riders get more delivery jobs. Simple, fast, reliable.">
+<title>OrderFlow | You sell it. Get a driver to deliver it.</title><meta name="description" content="Online vendors post their goods and get connected with available delivery drivers on OrderFlow. Riders get more delivery jobs. Simple, fast, reliable.">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@500,700,900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--b:#2563EB;--n:#071A3D;--l:#EFF6FF;--line:#d3e0f7;--mut:#51668f;--h:"Bricolage Grotesque","Satoshi",system-ui,sans-serif;--f:"Plus Jakarta Sans","Satoshi",system-ui,sans-serif}
+:root{--b:#2563EB;--n:#071A3D;--l:#EFF6FF;--line:#d3e0f7;--mut:#51668f;--h:"Satoshi","Bricolage Grotesque",system-ui,sans-serif;--f:"Satoshi","Plus Jakarta Sans",system-ui,sans-serif}
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:70px}
 body{margin:0;font:500 1rem/1.55 var(--f);color:var(--n);background:#fff;overflow-x:clip;-webkit-font-smoothing:antialiased}
 h1,h2,h3,p,ul,ol{margin:0}ul,ol{padding:0;list-style:none}img{display:block;max-width:100%}
 h1,h2,h3{font-family:var(--h);font-weight:800;letter-spacing:-.035em;line-height:1}
-h1{font-size:clamp(2.9rem,10.5vw,6.6rem);line-height:.92}h2{font-size:clamp(2.1rem,6vw,4.3rem);line-height:.96}
+h1{font-size:clamp(2.7rem,9.5vw,5.6rem);line-height:.95}h2{font-size:clamp(2.1rem,6vw,4.3rem);line-height:.96}
 .wrap{width:100%;max-width:1240px;margin:0 auto;padding:0 20px}
 .b{color:var(--b)}.lb{color:#79a2ff}.eye{display:inline-block;font-weight:800;font-size:.85rem;color:var(--b);margin-bottom:14px}
 section{padding:76px 0}.lead{font-size:clamp(1.05rem,2.2vw,1.25rem);color:var(--mut);max-width:44ch;margin-top:18px}
@@ -36,7 +37,7 @@ nav .wrap{display:flex;justify-content:space-between;align-items:center;height:6
 .r{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-top:1px solid var(--line);font-size:.95rem}.r span{color:var(--mut)}.r b{text-align:right}
 .st{margin:14px 0;padding:12px 14px;background:var(--l);font-weight:800;display:flex;gap:10px;align-items:center;transition:.4s}.st.ok{background:var(--b);color:#fff}
 .sp{width:13px;height:13px;border:3px solid var(--b);border-top-color:transparent;border-radius:50%;animation:sp .8s linear infinite;flex:none}@keyframes sp{to{transform:rotate(360deg)}}
-.pg{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;font-size:.72rem;font-weight:800;color:#8ca0c4}.pg div{border-top:5px solid var(--line);padding-top:6px;transition:.4s}.pg div.on{color:var(--n);border-color:var(--b)}
+.pg{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;font-size:.78rem;font-weight:800;color:#8ca0c4}.pg div{border-top:5px solid var(--line);padding-top:6px;transition:.4s}.pg div.on{color:var(--n);border-color:var(--b)}
 /* problem */
 .prob{background:var(--l)}.bub{display:flex;flex-direction:column;gap:12px;margin:38px 0 40px}
 .q{background:#fff;font-weight:800;font-size:clamp(1.05rem,3vw,1.5rem);padding:14px 20px;border-radius:22px 22px 22px 4px;align-self:flex-start;border:2px solid var(--n);opacity:0;transform:translateX(-26px);transition:.6s cubic-bezier(.2,.8,.2,1)}
@@ -73,6 +74,11 @@ nav .wrap{display:flex;justify-content:space-between;align-items:center;height:6
 footer{background:var(--n);color:#9db5ec;padding:56px 0 24px;font-size:.92rem}.fg{display:grid;gap:30px}footer h4{margin:0 0 10px;color:#fff}footer a{display:block;color:#9db5ec;text-decoration:none;padding:3px 0}footer a:hover{color:#fff}
 .cr{margin-top:36px;padding-top:20px;border-top:1px solid #27447f}
 .rv{opacity:0;transform:translateY(26px);transition:.8s cubic-bezier(.2,.8,.2,1)}.rv.in{opacity:1;transform:none}
+.dv{display:flex;gap:12px;align-items:center;border:2px solid var(--line);padding:10px 12px;margin-top:12px;transition:border-color .4s}.dv.on{border-color:var(--b)}
+.av{width:38px;height:38px;border-radius:50%;background:var(--n);color:#fff;display:grid;place-items:center;font-weight:800;font-size:.8rem;flex:none}.dv b{font-size:.95rem}.dv small{display:block;color:var(--mut);font-size:.82rem}.dv em{margin-left:auto;font-style:normal;font-weight:800;color:var(--b);font-size:.82rem;text-align:right}
+.bub.done .q{opacity:.4;text-decoration:line-through;text-decoration-color:var(--b);transition:opacity .8s,text-decoration-color .8s}
+.tile p{color:var(--mut);font-weight:700;margin-top:4px}.tile:not(:last-child)::after{content:"↓";display:block;text-align:center;font:800 1.7rem var(--h);color:var(--b);margin:10px 0 -8px;animation:bn 1.6s ease-in-out infinite}@keyframes bn{50%{transform:translateY(5px)}}
+.two .btn{width:100%}
 /* modal */
 dialog{border:2px solid var(--n);padding:0;width:min(460px,calc(100vw - 24px));max-height:92vh;color:var(--n);font-family:var(--f)}dialog::backdrop{background:#071a3dcc}
 dialog form,dialog .ok{display:grid;gap:12px;padding:28px 24px;position:relative}dialog h3{font-size:1.7rem}dialog p{color:var(--mut)}
@@ -86,7 +92,7 @@ dialog.done form{display:none}dialog.done .ok{display:grid}.btn[disabled]{opacit
 .sp2{grid-template-columns:1fr 1fr;gap:90px}.sp2.rev .ph2{order:2}
 .how{grid-template-columns:repeat(5,1fr);gap:22px}.how::before{left:0;right:0;top:21px;bottom:auto;width:auto;height:4px}.how .fl{left:0;top:21px;height:4px!important;width:0;transition:width 4s linear}.how.go .fl{width:100%}
 .how li,.how li:last-child{padding:64px 0 0}.how h3{font-size:1.35rem}
-.net{grid-template-columns:1fr 1fr 1fr;gap:56px;position:relative}.net .ln{display:block;position:absolute;top:calc(50% - 38px);height:4px;background:var(--line);width:56px;z-index:2}.net .ln:nth-of-type(1){left:calc(33.33% - 40px)}.net .ln:nth-of-type(2){left:calc(66.66% - 24px)}
+.net{grid-template-columns:1fr 1fr 1fr;gap:56px;position:relative}.tile:not(:last-child)::after{display:none}.two .btn{width:auto}.net .ln{display:block;position:absolute;top:calc(50% - 38px);height:4px;background:var(--line);width:56px;z-index:2}.net .ln:nth-of-type(1){left:calc(33.33% - 40px)}.net .ln:nth-of-type(2){left:calc(66.66% - 24px)}
 .net .ln i{position:absolute;top:-5px;left:0;width:14px;height:14px;border-radius:50%;background:var(--b);animation:mv 2s linear infinite}@keyframes mv{to{left:calc(100% - 14px)}}
 .wy li{grid-template-columns:70px 1fr 1fr;align-items:center;gap:20px}
 .cp{grid-template-columns:1fr 1fr}.fg{grid-template-columns:1.6fr 1fr 1fr 1fr}
@@ -101,18 +107,19 @@ dialog.done form{display:none}dialog.done .ok{display:grid}.btn[disabled]{opacit
 
 <header class="hero" id="top"><div class="wrap g"><div>
 <span class="eye">Now in Ibadan · Other states coming soon</span>
-<h1><span><i>You sell it.</i></span><span><i class="b">Find a driver.</i></span></h1>
-<p class="lead">Take photos of your goods, post them on OrderFlow, and get a delivery driver. Riders get more delivery jobs.</p>
-<div class="two"><div><small>Got goods to send?</small><button class="btn arr" data-open="business">Find a driver</button></div><span class="or">or</span><div><small>Want delivery work?</small><button class="btn out arr" data-open="rider">Join as a rider</button></div></div></div>
-<div class="stage"><div class="oc"><div class="t"><span>NEW POST</span><span>Just now</span></div><h3>Ankara dress × 2</h3><div class="ph"></div>
+<h1><span><i>You sell it.</i></span><span><i class="b">Get a driver to deliver it.</i></span></h1>
+<p class="lead">Post what you need delivered and connect with an available driver. No more calling around.</p>
+<div class="two"><div><small>Got goods to send?</small><button class="btn arr" data-open="business">Get a driver</button></div><span class="or">or</span><div><small>Want more delivery jobs?</small><button class="btn out arr" data-open="rider">Join as a rider</button></div></div></div>
+<div class="stage"><div class="oc"><div class="t"><span>SAMPLE POST</span><span>Just now</span></div><h3>Ankara dress × 2</h3><div class="ph"></div>
 <div class="r"><span>Pickup</span><b>Yaba, Lagos</b></div><div class="r"><span>Deliver to</span><b>Ikeja, Lagos</b></div><div class="r"><span>Posted by</span><b>Chidi O.</b></div>
+<div class="dv" id="dv"><span class="av" id="av">?</span><div><b id="dn">Checking for an available driver...</b><small id="ds">Drivers near Yaba</small></div><em id="dc">0 seen</em></div>
 <div class="st" id="hs"><i class="sp"></i><span>Looking for a driver...</span></div>
-<div class="pg" id="hp"><div>Posted ✓</div><div>Driver found</div><div>On the way</div><div>Delivered ✓</div></div></div></div></div></header>
+<div class="pg" id="hp"><div>Posted</div><div>Driver found</div><div>On the way</div><div>Delivered ✓</div></div></div></div></div></header>
 
 <section class="prob"><div class="wrap"><span class="eye">The problem</span><h2>Still calling riders<br><span class="b">one by one?</span></h2>
 <p class="lead">Finding a driver on your own takes time you don't have. OrderFlow puts them in one place.</p>
-<div class="bub" id="bub"><div class="q">"Is anyone available?"</div><div class="q">"How much to deliver this?"</div><div class="q">"Where is the rider?"</div><div class="q">"Has the order been picked up?"</div><div class="q">"Who can deliver this today?"</div></div>
-<div class="fix rv"><span class="ar">→</span><h3>OrderFlow makes delivery easier.</h3><p>One place. Less stress. Goods moving.</p></div></div></section>
+<div class="bub" id="bub"><div class="q">Is anyone available?</div><div class="q">How much to deliver this?</div><div class="q">Where is the rider?</div><div class="q">Has the order been picked up?</div><div class="q">Who can deliver this today?</div></div>
+<div class="fix rv"><span class="ar">→</span><h3>OrderFlow makes delivery easier.</h3><p>One place. Less calling. Goods moving.</p></div></div></section>
 
 <section id="how-it-works"><div class="wrap"><span class="eye">How it works</span><h2>From your store<br>to <span class="b">their door.</span></h2>
 <ol class="how" id="hw"><div class="fl"></div>
@@ -123,31 +130,31 @@ dialog.done form{display:none}dialog.done .ok{display:grid}.btn[disabled]{opacit
 <li data-n="05"><h3>Delivered</h3><p>Your customer receives their order. Everyone is happy.</p></li></ol></div></section>
 
 <section id="for-businesses" style="background:var(--l)"><div class="wrap sp2"><div class="ph2 rv"><img src="https://orderflowlandingpage.vercel.app/assets/images/vendor_packaging.jpg" alt="Nigerian vendor packaging an order" loading="lazy"><span class="tg">Ibadan, Nigeria</span></div>
-<div><span class="eye">For businesses</span><h2>You sell.<br><span class="b">We help you deliver.</span></h2><p class="lead">Selling online? Post your goods and find a delivery driver on OrderFlow. No more calling around.</p>
-<ul class="ck"><li>Post your goods with photos from your phone</li><li>Find available drivers quickly</li><li>Know what is happening with your delivery</li><li>Spend less time calling around</li></ul><button class="btn arr" data-open="business">Start posting goods</button></div></div></section>
+<div><span class="eye">For businesses</span><h2>You sell.<br><span class="b">We help you deliver.</span></h2><p class="lead">Stop calling around. Post what you are sending and connect with an available driver.</p>
+<ul class="ck"><li>Spend less time looking for riders</li><li>Post delivery details in minutes</li><li>Know what is happening with your delivery</li><li>Get your goods moving to your customers</li></ul><button class="btn arr" data-open="business">Get a driver</button></div></div></section>
 
 <section class="dark" id="for-riders"><div class="wrap sp2 rev"><div class="ph2 rv"><img src="https://orderflowlandingpage.vercel.app/assets/images/rider_pickup.jpg" alt="Delivery rider picking up a package" loading="lazy"><span class="tg">Delivery jobs</span>
-<div class="jb"><small>NEW DELIVERY · JUST NOW</small><div class="rt">Ikeja <span>→</span> Yaba</div><div class="pr">₦3,500</div><button class="btn" id="acc">Accept job</button></div></div>
-<div><span class="eye lb">For riders &amp; logistics</span><h2>You deliver.<br><span class="lb">You earn.</span></h2><p class="lead">Join OrderFlow and see delivery jobs from vendors near you. Pick the ones that work for you.</p>
-<ul class="ck"><li>See delivery requests from vendors</li><li>Choose jobs that work for you</li><li>Keep track of all your deliveries</li><li>Earn from more trips every day</li></ul><button class="btn wh arr" data-open="rider">Join the delivery network</button></div></div></section>
+<div class="jb"><small>SAMPLE DELIVERY</small><div class="rt">Ikeja <span>→</span> Yaba</div><div class="pr">₦3,500</div><button class="btn" id="acc">Accept job</button></div></div>
+<div><span class="eye lb">For riders &amp; logistics</span><h2>You deliver.<br><span class="lb">You earn.</span></h2><p class="lead">See delivery opportunities, choose the ones that work for you, and earn from the deliveries you complete.</p>
+<ul class="ck"><li>See delivery requests from vendors</li><li>Choose jobs that fit your day</li><li>Keep track of your deliveries</li><li>Earn from every delivery you complete</li></ul><button class="btn wh arr" data-open="rider">Join the delivery network</button></div></div></section>
 
-<section id="about"><div class="wrap"><span class="eye">The network</span><h2>Business. Rider.<br><span class="b">Customer.</span></h2><p class="lead">OrderFlow connects vendors and drivers. You post. A driver delivers. Your customer is happy.</p>
+<section id="about"><div class="wrap"><span class="eye">The network</span><h2>Business. Rider.<br><span class="b">Customer.</span></h2><p class="lead">One flow: a business posts a delivery, a driver takes it, and the customer receives the goods.</p>
 <div class="net rv"><i class="ln"><i></i></i><i class="ln"><i></i></i>
-<div class="tile"><div class="im"><img src="https://orderflowlandingpage.vercel.app/assets/images/vendor_packaging.jpg" alt="Business owner packaging an order" loading="lazy"></div><h3>Business</h3></div>
-<div class="tile"><div class="im"><img src="https://orderflowlandingpage.vercel.app/assets/images/rider_pickup.jpg" alt="Delivery rider picking up package" loading="lazy"></div><h3>Rider</h3></div>
-<div class="tile"><div class="im"><img src="https://orderflowlandingpage.vercel.app/assets/images/customer_delivery.jpg" alt="Customer receiving delivery" loading="lazy"></div><h3>Customer</h3></div></div></div></section>
+<div class="tile"><div class="im"><img src="https://orderflowlandingpage.vercel.app/assets/images/vendor_packaging.jpg" alt="Business owner packaging an order" loading="lazy"></div><h3>Business</h3><p>Posts a delivery</p></div>
+<div class="tile"><div class="im"><img src="https://orderflowlandingpage.vercel.app/assets/images/rider_pickup.jpg" alt="Delivery rider picking up package" loading="lazy"></div><h3>Rider</h3><p>Takes the delivery</p></div>
+<div class="tile"><div class="im"><img src="https://orderflowlandingpage.vercel.app/assets/images/customer_delivery.jpg" alt="Customer receiving delivery" loading="lazy"></div><h3>Customer</h3><p>Receives the goods</p></div></div></div></section>
 
 <section style="background:var(--l)"><div class="wrap"><span class="eye">Why OrderFlow</span><h2>Built for the way<br><span class="b">Nigerian business works.</span></h2>
-<ul class="wy"><li class="rv"><span>01</span><h3>Easy to use</h3><p>You don't need to be a tech person. If you can use WhatsApp, you can use OrderFlow.</p></li><li class="rv"><span>02</span><h3>Quick to get started</h3><p>Sign up today and post your first goods or see your first job the same day.</p></li><li class="rv"><span>03</span><h3>Know what's happening</h3><p>Always know where your delivery is. No more wondering, no more guessing.</p></li><li class="rv"><span>04</span><h3>More delivery opportunities</h3><p>Riders get more jobs. Businesses get more choices. Everyone moves more.</p></li></ul></div></section>
+<ul class="wy"><li class="rv"><span>01</span><h3>Easy to use</h3><p>Post a delivery without complicated steps. If you can use WhatsApp, you can use OrderFlow.</p></li><li class="rv"><span>02</span><h3>Quick to get started</h3><p>Get your delivery request ready in minutes.</p></li><li class="rv"><span>03</span><h3>Know what's happening</h3><p>Stay informed as your delivery moves from pickup to your customer.</p></li><li class="rv"><span>04</span><h3>More delivery opportunities</h3><p>Drivers can discover more jobs that fit their day.</p></li></ul></div></section>
 
-<section class="cta"><div class="wrap"><span class="eye" style="color:#cfe0ff">Ready?</span><h2>Ready to get moving?</h2><p class="lead" style="color:#e2ecff">Whether you sell or deliver, OrderFlow is built for you.</p>
-<div class="cp"><div><small>FOR BUSINESSES</small><h3>Find a driver for your goods.</h3><p>Sign up and post your first delivery.</p><button class="btn arr" data-open="business">Get started</button></div>
-<div><small>FOR RIDERS</small><h3>Start earning from deliveries.</h3><p>Join the network and see jobs near you.</p><button class="btn wh arr" data-open="rider">Join as a rider</button></div></div></div></section>
+<section class="cta"><div class="wrap"><span class="eye" style="color:#cfe0ff">Ready?</span><h2>Be ready when OrderFlow launches.</h2><p class="lead" style="color:#e2ecff">We are starting in Ibadan. Join the early list and we will tell you the moment it is ready.</p>
+<div class="cp"><div><small>FOR BUSINESSES</small><h3>Get a driver for your goods.</h3><p>Be first to post a delivery when we open.</p><button class="btn arr" data-open="business">Join early list</button></div>
+<div><small>FOR RIDERS</small><h3>Start earning from deliveries.</h3><p>Be first to see delivery jobs when they open.</p><button class="btn wh arr" data-open="rider">Join as a rider</button></div></div></div></section>
 
 <footer><div class="wrap"><div class="fg"><div><a class="logo" href="#top"><svg class="lgo" viewBox="0 0 651 628"><use href="#lg"/></svg>ORDERFLOW</a><p style="margin-top:14px;max-width:34ch">Helping vendors find delivery drivers and riders find more work across Nigeria.</p></div>
 <div><h4>Product</h4><a href="#how-it-works">How it works</a><a href="#for-businesses">For businesses</a><a href="#for-riders">For riders</a></div><div><h4>Company</h4><a href="#about">About</a><a href="#">Contact</a></div><div><h4>Legal</h4><a href="#">Privacy policy</a><a href="#">Terms of service</a></div></div>
 <p class="cr">© 2026 OrderFlow. All rights reserved. Made for Nigerian commerce. Starting in Ibadan, coming to other states soon.</p></div></footer>
-<dialog id="m-business"><form data-role="business" novalidate><button type="button" class="x" aria-label="Close">×</button><h3>Send your goods with a driver</h3><p>Create your free vendor account and find drivers for your deliveries.</p><label>Your full name<input name="full_name" autocomplete="name" required></label><label>Business name<input name="business_name" required></label><label>Email<input name="email" type="email" autocomplete="email" placeholder="you@email.com" required></label><label>WhatsApp / Phone number<input name="phone" type="tel" autocomplete="tel" placeholder="0801 234 5678" required></label><label>Your city<select name="city" required><option value="">Select city</option><option>Lagos</option><option>Abuja</option><option>Port Harcourt</option><option>Kano</option><option>Ibadan</option><option>Other</option></select></label><input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true"><div class="err" role="alert"></div><button class="btn" type="submit">Get started, it's free</button></form><div class="ok"><b>✓</b><h3>You're on the list!</h3><p>We'll be in touch very soon. Thanks for joining OrderFlow.</p><button class="btn" type="button" data-close>Done</button></div></dialog><dialog id="m-rider"><form data-role="rider" novalidate><button type="button" class="x" aria-label="Close">×</button><h3>Join as a rider</h3><p>Get delivery jobs from vendors near you and start earning more.</p><label>Your full name<input name="full_name" autocomplete="name" required></label><label>Email<input name="email" type="email" autocomplete="email" placeholder="you@email.com" required></label><label>WhatsApp / Phone number<input name="phone" type="tel" autocomplete="tel" placeholder="0801 234 5678" required></label><label>Your city<select name="city" required><option value="">Select city</option><option>Lagos</option><option>Abuja</option><option>Port Harcourt</option><option>Kano</option><option>Ibadan</option><option>Other</option></select></label><label>What do you ride or drive?<select name="vehicle" required><option value="">Select</option><option>Motorbike</option><option>Bicycle</option><option>Car</option><option>Van</option><option>Truck</option></select></label><input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true"><div class="err" role="alert"></div><button class="btn" type="submit">Join the delivery network</button></form><div class="ok"><b>✓</b><h3>You're on the list!</h3><p>We'll be in touch very soon. Thanks for joining OrderFlow.</p><button class="btn" type="button" data-close>Done</button></div></dialog>
+<dialog id="m-business"><form data-role="business" novalidate><button type="button" class="x" aria-label="Close">×</button><h3>Join the early list</h3><p>Tell us about your business. We will message you as soon as OrderFlow is ready in Ibadan.</p><label>Your full name<input name="full_name" autocomplete="name" required></label><label>Business name<input name="business_name" required></label><label>Email<input name="email" type="email" autocomplete="email" placeholder="you@email.com" required></label><label>WhatsApp / Phone number<input name="phone" type="tel" autocomplete="tel" placeholder="0801 234 5678" required></label><label>Your city<select name="city" required><option value="">Select city</option><option>Lagos</option><option>Abuja</option><option>Port Harcourt</option><option>Kano</option><option>Ibadan</option><option>Other</option></select></label><input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true"><div class="err" role="alert"></div><button class="btn" type="submit">Join the early list</button></form><div class="ok"><b>✓</b><h3>You're on the list!</h3><p>We'll be in touch very soon. Thanks for joining OrderFlow.</p><button class="btn" type="button" data-close>Done</button></div></dialog><dialog id="m-rider"><form data-role="rider" novalidate><button type="button" class="x" aria-label="Close">×</button><h3>Join as a rider</h3><p>Tell us how you deliver. We will message you as soon as delivery jobs open.</p><label>Your full name<input name="full_name" autocomplete="name" required></label><label>Email<input name="email" type="email" autocomplete="email" placeholder="you@email.com" required></label><label>WhatsApp / Phone number<input name="phone" type="tel" autocomplete="tel" placeholder="0801 234 5678" required></label><label>Your city<select name="city" required><option value="">Select city</option><option>Lagos</option><option>Abuja</option><option>Port Harcourt</option><option>Kano</option><option>Ibadan</option><option>Other</option></select></label><label>What do you ride or drive?<select name="vehicle" required><option value="">Select</option><option>Motorbike</option><option>Bicycle</option><option>Car</option><option>Van</option><option>Truck</option></select></label><input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true"><div class="err" role="alert"></div><button class="btn" type="submit">Join the delivery network</button></form><div class="ok"><b>✓</b><h3>You're on the list!</h3><p>We'll be in touch very soon. Thanks for joining OrderFlow.</p><button class="btn" type="button" data-close>Done</button></div></dialog>
 <script>
 /* Signups go to /api/signup (api/signup.js), which reads your Supabase keys from Vercel environment variables. */
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
@@ -169,11 +176,15 @@ f.closest('dialog').classList.add('done');f.reset()
 }catch(x){err.style.color='#b3261e';err.textContent='Something went wrong. Please try again.'}
 btn.disabled=false;btn.textContent=lab}});
 /* hero card loop */
-const hs=$('#hs'),pg=$$('#hp div'),S=[['Looking for a driver...',1,0],['Driver found ✓',0,1],['On the way',0,2],['Delivered ✓',0,3]];let k=0;
-(function s(){const[t,sp,i]=S[k];hs.innerHTML=(sp?'<i class="sp"></i>':'')+'<span>'+t+'</span>';hs.classList.toggle('ok',i==3);pg.forEach((e,j)=>e.classList.toggle('on',sp?false:j<=i));k=(k+1)%4;setTimeout(s,k==0?3200:1900)})();
+const hs=$('#hs'),pg=$$('#hp div'),dv=$('#dv');
+const S=[['Drivers can see it',1,0,'?','Checking for an available driver...','Drivers near Yaba','1 viewing'],['3 drivers are interested',1,0,'3','Choose a driver','Tap to pick one','3 interested'],['Driver chosen ✓',0,1,'TA','Tunde A. · Motorbike','Example driver · 4 mins to pickup','Chosen'],['On the way',0,2,'TA','Tunde A. · Motorbike','Heading to Ikeja','Moving'],['Delivered ✓',0,3,'TA','Tunde A. · Motorbike','Customer received it','Done']];let k=0;
+(function s(){const[t,sp,i,av,dn,ds,dc]=S[k];hs.innerHTML=(sp?'<i class="sp"></i>':'')+'<span>'+t+'</span>';hs.classList.toggle('ok',i==3&&!sp);
+pg.forEach((e,j)=>e.classList.toggle('on',j<=i&&(i>0||k>0)));if(k==0)pg[0].classList.add('on');
+$('#av').textContent=av;$('#dn').textContent=dn;$('#ds').textContent=ds;$('#dc').textContent=dc;dv.classList.toggle('on',i>=1);
+k=(k+1)%S.length;setTimeout(s,k==0?3400:2000)})();
 /* reveals */
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const t=e.target;t.classList.add('in');io.unobserve(t);
-if(t.id=='hw'){t.classList.add('go');[...t.querySelectorAll('li')].forEach((l,i)=>setTimeout(()=>l.classList.add('on'),i*800))}}}),{threshold:.25});
+if(t.classList.contains('fix'))$('#bub').classList.add('done');if(t.id=='hw'){t.classList.add('go');[...t.querySelectorAll('li')].forEach((l,i)=>setTimeout(()=>l.classList.add('on'),i*800))}}}),{threshold:.25});
 ['.rv','#bub','#hw'].forEach(q=>$$(q).forEach(e=>io.observe(e)));
 $('#acc').onclick=e=>{const b=e.target;b.textContent='Job accepted ✓';b.classList.add('d')};
 </script></body></html>
